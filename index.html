@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Details Task</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js" defer></script>
+</head>
+<body class="flex flex-col items-center justify-center min-h-screen">
+    <h1 class="text-6xl font-bold text-blue-800 mb-20 ">STUDENT DETAILS TASK</h1>
+
+    <div class="p-4 w-96">
+        <h2 class="text-4xl font-bold text-center mb-4">STUDENT FORM</h2>
+
+        <table class=" border border-black w-full">
+            <tr>
+                <td class="border border-black p-1">Name</td>
+                <td class="border border-black p-1">
+                    <input type="text" id="name" class="border w-full p-1">
+                </td>
+            </tr>
+            <tr>
+                <td class="border border-black p-1">Age</td>
+                <td class="border border-black p-1">
+                    <input type="number" id="age" class="border w-full p-1">
+                </td>
+            </tr>
+            <tr>
+                <td class="border border-black p-1">Gender</td>
+                <td class="border border-black p-1">
+                    <input type="radio" name="gender" value="Male" checked> Male
+                    <input type="radio" name="gender" value="Female"> Female
+                </td>
+            </tr>
+            <tr>
+                <td class="border border-black p-1">Course</td>
+                <td class="border border-black p-1">
+                    <select id="course" class="border w-full p-1">
+                        <option>JavaScript</option>
+                        <option>Python</option>
+                        <option>Java</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td class="border border-black p-1">E-mail</td>
+                <td class="border border-black p-1">
+                    <input type="email" id="email" class="border w-full p-1">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="text-center border border-black p-1">
+                    <button id="saveBtn" class="bg-green-500 text-white px-4 py-2 w-full">Save</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <table class="mt-6 border-collapse border border-black w-3/4 max-w-2xl">
+        <thead>
+            <tr class="bg-gray-200">
+                <th class="border border-black px-2 py-1 text-center">NAME</th>
+                <th class="border border-black px-2 py-1 text-center">AGE</th>
+                <th class="border border-black px-2 py-1 text-center">COURSE</th>
+                <th class="border border-black px-2 py-1 text-center">GENDER</th>
+                <th class="border border-black px-2 py-1 text-center">EMAIL</th>
+                <th class="border border-black px-2 py-1 text-center">ACTION</th>
+            </tr>
+        </thead>
+        <tbody id="studentTable"></tbody>
+    </table>
+</body>
+</html>
